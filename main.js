@@ -1,3 +1,4 @@
+$(document).ready(function() {
 $(window).scroll(function() {
 	$(window).scrollTop();
 	
@@ -11,3 +12,28 @@ $(window).scroll(function() {
 	}
 });
 
+   $.fn.scrollView = function () {
+  return this.each(function () {
+    $('html, body').animate({
+      scrollTop: $(this).offset().top
+    }, 1000);
+  });
+   }
+$('.nav-menu').scrollView();
+$('.scroll').click(function (event) {
+  event.preventDefault();
+  $('.nav-menu').scrollView();
+});
+$('.nav-menu').scrollView();
+$('.scroll').click(function (event) {
+  event.preventDefault();
+  $('.nav-menu').scrollView();
+});
+ 
+$('.portfolio').scrollView();
+$('.scroll1').click(function (event) {
+  event.preventDefault();
+  $('.portfolio').scrollView();
+});
+
+});
